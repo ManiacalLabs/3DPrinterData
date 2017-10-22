@@ -1,0 +1,17 @@
+* Please ensure enough space for setting T-Rex 2+, and leave 200mm gap around.
+
+* For beginners, please print with single extruders first, unless you are an advanced user or have experience on working with dual extruder.
+
+* Please close the heated bed when slicing, cause T-Rex 2+ has an independent heating pad-KEENOVO.
+
+* Please wear protective glasses before laser engraving. or else, it'll cause damage to eyes.
+
+* The power of laser is quite high, so it's suggested to work within 2 hours. or else, it'll cause damage to engraver.
+
+* Recommend Temperature: PLA 190-200C, Bed 50-60C; ABS 220-230C, Bed 100-110C.
+
+* If the model you want to print is already 400x400mm, pls do not add "Brim" or "Raft" when slicing, coz it'll be over 400mm after add that.
+
+* High-temp. extruder is suitable for printing filament above 300C, pls do not print ABS or PLA with it. otherwise, it'll be clogged.
+
+* If you need to pull out filament, please extrude it 10mm around by hand first, then pull it out. If you pull out filament directly, it will be easy to clog.
