@@ -1,1 +1,2 @@
 - [Extruder Springs](https://www.amazon.com/dp/B0744GFV63/ref=dp_sp_detail?psc=1)
+- [Y Axis Motor Upgrade (2A)](https://www.amazon.com/gp/product/B00PNEQKC0/)
