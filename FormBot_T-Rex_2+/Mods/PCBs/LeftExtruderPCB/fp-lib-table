@@ -1,0 +1,4 @@
+(fp_lib_table
+  (lib (name w_conn_pc)(type KiCad)(uri G:/3DPrinterData/FormBot_T-Rex_2+/Mods/PCBs/KiCAD/w_conn_pc.pretty)(options "")(descr ""))
+  (lib (name custom)(type KiCad)(uri G:/3DPrinterData/FormBot_T-Rex_2+/Mods/PCBs/KiCAD/custom.pretty)(options "")(descr ""))
+)
