@@ -31,6 +31,7 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
+LIBS:RightExtruderPCB-cache
 EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
@@ -54,17 +55,6 @@ F 1 "DB15_Control" H 4150 2850 50  0000 C CNN
 F 2 "custom:VGA_Female" H 3200 2500 50  0001 C CNN
 F 3 "" H 3200 2500 50  0001 C CNN
 	1    4150 2100
-	0    1    1    0   
-$EndComp
-$Comp
-L Conn_01x02 J2
-U 1 1 5A2C38A8
-P 3450 1350
-F 0 "J2" H 3450 1450 50  0000 C CNN
-F 1 "BL-2" H 3450 1150 50  0000 C CNN
-F 2 "Connectors_JST:JST_XH_S02B-XH-A_02x2.50mm_Angled" H 3450 1350 50  0001 C CNN
-F 3 "" H 3450 1350 50  0001 C CNN
-	1    3450 1350
 	0    1    1    0   
 $EndComp
 $Comp
@@ -99,17 +89,6 @@ F 2 "Connectors_JST:JST_XH_B02B-XH-A_02x2.50mm_Straight" H 4750 2950 50  0001 C 
 F 3 "" H 4750 2950 50  0001 C CNN
 	1    4750 2950
 	0    -1   -1   0   
-$EndComp
-$Comp
-L Conn_01x03 J3
-U 1 1 5A2C4585
-P 4850 1350
-F 0 "J3" H 4850 1550 50  0000 C CNN
-F 1 "BL-3" H 4850 1150 50  0000 C CNN
-F 2 "Connectors_JST:JST_XH_S03B-XH-A_03x2.50mm_Angled" H 4850 1350 50  0001 C CNN
-F 3 "" H 4850 1350 50  0001 C CNN
-	1    4850 1350
-	0    1    1    0   
 $EndComp
 $Comp
 L Conn_01x06_Female J7
@@ -163,56 +142,20 @@ Text GLabel 3450 3200 3    30   Input ~ 0
 HEAT_+
 Wire Wire Line
 	3450 3200 3450 3150
-Text GLabel 4050 1750 1    30   Input ~ 0
-BL3_1
-Wire Wire Line
-	4050 1750 4050 1800
-Text GLabel 4950 1100 1    30   Input ~ 0
-BL3_1
-Text GLabel 4250 1750 1    30   Input ~ 0
-BL3_2
-Text GLabel 4850 1100 1    30   Input ~ 0
-BL3_2
-Text GLabel 4450 1750 1    30   Input ~ 0
-BL3_3
-Text GLabel 4750 1100 1    30   Input ~ 0
-BL3_3
-Wire Wire Line
-	4250 1750 4250 1800
-Wire Wire Line
-	4450 1750 4450 1800
-Wire Wire Line
-	4950 1100 4950 1150
-Wire Wire Line
-	4850 1100 4850 1150
-Wire Wire Line
-	4750 1100 4750 1150
-Text GLabel 4650 1750 1    30   Input ~ 0
-BL2_1
-Text GLabel 3450 1100 1    30   Input ~ 0
-BL2_1
-Text GLabel 3750 2450 3    30   Input ~ 0
-BL2_2
-Text GLabel 3350 1100 1    30   Input ~ 0
-BL2_2
 Text GLabel 3550 3200 3    30   Input ~ 0
 HEAT_-
-Text GLabel 4150 2450 3    30   Input ~ 0
-FAN_CTL_2
-Text GLabel 4000 3200 3    30   Input ~ 0
-FAN_CTL_2
-Text GLabel 3950 2450 3    30   Input ~ 0
-FAN_CTL_1
-Text GLabel 3900 3200 3    30   Input ~ 0
-FAN_CTL_1
+Text GLabel 4050 1800 1    30   Input ~ 0
+FAN_CTL_+
+Text GLabel 4250 1800 1    30   Input ~ 0
+FAN_CTL_-
 Text GLabel 4550 2450 3    30   Input ~ 0
-E0_1
+E1_1
 Text GLabel 4750 3200 3    30   Input ~ 0
-E0_1
+E1_1
 Text GLabel 4350 2450 3    30   Input ~ 0
-E0_2
+E1_2
 Text GLabel 4850 3200 3    30   Input ~ 0
-E0_2
+E1_2
 Wire Wire Line
 	4750 3150 4750 3200
 Wire Wire Line
@@ -222,21 +165,9 @@ Wire Wire Line
 Wire Wire Line
 	3900 3150 3900 3200
 Wire Wire Line
-	3750 2400 3750 2450
-Wire Wire Line
-	3950 2450 3950 2400
-Wire Wire Line
-	4150 2400 4150 2450
-Wire Wire Line
 	4350 2450 4350 2400
 Wire Wire Line
 	4550 2400 4550 2450
-Wire Wire Line
-	4650 1750 4650 1800
-Wire Wire Line
-	3350 1100 3350 1150
-Wire Wire Line
-	3450 1150 3450 1100
 Text GLabel 3400 2100 0    30   Input ~ 0
 GND
 Wire Wire Line
@@ -251,4 +182,13 @@ Wire Wire Line
 	4400 3150 4400 3200
 NoConn ~ 3850 1400
 NoConn ~ 4150 1400
+Text GLabel 4000 3200 3    30   Input ~ 0
+FAN_CTL_+
+Text GLabel 3900 3200 3    30   Input ~ 0
+FAN_CTL_-
+NoConn ~ 3950 2400
+NoConn ~ 4150 2400
+NoConn ~ 3750 2400
+NoConn ~ 4450 1800
+NoConn ~ 4650 1800
 $EndSCHEMATC

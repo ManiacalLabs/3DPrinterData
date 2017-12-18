@@ -31,6 +31,7 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
+LIBS:LeftExtruderPCB-cache
 EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
@@ -198,13 +199,13 @@ BL2_2
 Text GLabel 3550 3200 3    30   Input ~ 0
 HEAT_-
 Text GLabel 4150 2450 3    30   Input ~ 0
-FAN_CTL_2
+FAN_CTL_-
 Text GLabel 4000 3200 3    30   Input ~ 0
-FAN_CTL_2
+FAN_CTL_-
 Text GLabel 3950 2450 3    30   Input ~ 0
-FAN_CTL_1
+FAN_CTL_+
 Text GLabel 3900 3200 3    30   Input ~ 0
-FAN_CTL_1
+FAN_CTL_+
 Text GLabel 4550 2450 3    30   Input ~ 0
 E0_1
 Text GLabel 4750 3200 3    30   Input ~ 0
