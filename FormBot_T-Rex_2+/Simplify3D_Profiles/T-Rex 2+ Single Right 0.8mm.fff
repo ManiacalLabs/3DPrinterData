@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<profile name="T-Rex 2+ Single Right 0.8mm" version="2017-12-08 13:22:42" app="S3D-Software 4.0.0">
+<profile name="T-Rex 2+ Single Right 0.8mm" version="2017-12-17 10:12:48" app="S3D-Software 4.0.0">
   <baseProfile>Default</baseProfile>
   <printMaterial>PLA</printMaterial>
   <printQuality>Fast</printQuality>
@@ -9,7 +9,7 @@
     <diameter>0.8</diameter>
     <autoWidth>0</autoWidth>
     <width>0.8</width>
-    <extrusionMultiplier>1.15</extrusionMultiplier>
+    <extrusionMultiplier>1.1</extrusionMultiplier>
     <useRetract>1</useRetract>
     <retractionDistance>1</retractionDistance>
     <extraRestartDistance>0</extraRestartDistance>
@@ -24,7 +24,7 @@
   <layerHeight>0.4</layerHeight>
   <topSolidLayers>3</topSolidLayers>
   <bottomSolidLayers>3</bottomSolidLayers>
-  <perimeterOutlines>3</perimeterOutlines>
+  <perimeterOutlines>2</perimeterOutlines>
   <printPerimetersInsideOut>1</printPerimetersInsideOut>
   <startPointOption>2</startPointOption>
   <startPointOriginX>0</startPointOriginX>
@@ -104,7 +104,7 @@
   </temperatureController>
   <fanSpeed>
     <setpoint layer="1" speed="0"/>
-    <setpoint layer="10" speed="100"/>
+    <setpoint layer="2" speed="100"/>
   </fanSpeed>
   <blipFanToFullPower>1</blipFanToFullPower>
   <adjustSpeedForCooling>1</adjustSpeedForCooling>
@@ -155,7 +155,7 @@
   <celebration>0</celebration>
   <celebrationSong>Star Wars</celebrationSong>
   <postProcessing></postProcessing>
-  <defaultSpeed>1800</defaultSpeed>
+  <defaultSpeed>2400</defaultSpeed>
   <outlineUnderspeed>0.5</outlineUnderspeed>
   <solidInfillUnderspeed>0.9</solidInfillUnderspeed>
   <supportUnderspeed>0.8</supportUnderspeed>
@@ -208,10 +208,10 @@
       <setpoint layer="1" temperature="235"/>
     </temperatureController>
     <globalBedTemperature>60</globalBedTemperature>
-    <globalExtrusionMultiplier>1.15</globalExtrusionMultiplier>
+    <globalExtrusionMultiplier>1.1</globalExtrusionMultiplier>
     <fanSpeed>
       <setpoint layer="1" speed="0"/>
-      <setpoint layer="10" speed="100"/>
+      <setpoint layer="2" speed="100"/>
     </fanSpeed>
   </autoConfigureMaterial>
   <autoConfigureMaterial name="ABS">

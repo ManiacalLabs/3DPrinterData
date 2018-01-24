@@ -1,27 +1,27 @@
 <?xml version="1.0"?>
-<profile name="T-Rex 2+ Single Left" version="2017-11-19 15:59:02" app="S3D-Software 4.0.0">
+<profile name="T-Rex 2+ Single Left" version="2018-01-24 18:25:02" app="S3D-Software 4.0.0">
   <baseProfile>Default</baseProfile>
-  <printMaterial>PLA</printMaterial>
-  <printQuality>Medium</printQuality>
+  <printMaterial>eSun PLA Pro+</printMaterial>
+  <printQuality>Fast</printQuality>
   <printExtruders></printExtruders>
   <extruder name="Left">
     <toolheadNumber>0</toolheadNumber>
     <diameter>0.4</diameter>
     <autoWidth>0</autoWidth>
     <width>0.4</width>
-    <extrusionMultiplier>0.96</extrusionMultiplier>
+    <extrusionMultiplier>0.9</extrusionMultiplier>
     <useRetract>1</useRetract>
-    <retractionDistance>1</retractionDistance>
+    <retractionDistance>1.4</retractionDistance>
     <extraRestartDistance>0</extraRestartDistance>
     <retractionZLift>0</retractionZLift>
     <retractionSpeed>1800</retractionSpeed>
     <useCoasting>1</useCoasting>
-    <coastingDistance>0.2</coastingDistance>
+    <coastingDistance>0.6</coastingDistance>
     <useWipe>0</useWipe>
     <wipeDistance>5</wipeDistance>
   </extruder>
   <primaryExtruder>0</primaryExtruder>
-  <layerHeight>0.2</layerHeight>
+  <layerHeight>0.3</layerHeight>
   <topSolidLayers>3</topSolidLayers>
   <bottomSolidLayers>3</bottomSolidLayers>
   <perimeterOutlines>3</perimeterOutlines>
@@ -46,7 +46,7 @@
   <skirtExtruder>0</skirtExtruder>
   <skirtLayers>1</skirtLayers>
   <skirtOutlines>2</skirtOutlines>
-  <skirtOffset>5</skirtOffset>
+  <skirtOffset>25</skirtOffset>
   <usePrimePillar>0</usePrimePillar>
   <primePillarExtruder>999</primePillarExtruder>
   <primePillarWidth>12</primePillarWidth>
@@ -62,7 +62,7 @@
   <infillExtruder>0</infillExtruder>
   <internalInfillPattern>Rectilinear</internalInfillPattern>
   <externalInfillPattern>Rectilinear</externalInfillPattern>
-  <infillPercentage>25</infillPercentage>
+  <infillPercentage>15</infillPercentage>
   <outlineOverlapPercentage>25</outlineOverlapPercentage>
   <infillExtrusionWidthPercentage>100</infillExtrusionWidthPercentage>
   <minInfillLength>1.2</minInfillLength>
@@ -72,7 +72,7 @@
   <externalInfillAngles>45,-45</externalInfillAngles>
   <generateSupport>0</generateSupport>
   <supportExtruder>0</supportExtruder>
-  <supportInfillPercentage>30</supportInfillPercentage>
+  <supportInfillPercentage>25</supportInfillPercentage>
   <supportExtraInflation>0</supportExtraInflation>
   <supportBaseLayers>0</supportBaseLayers>
   <denseSupportExtruder>0</denseSupportExtruder>
@@ -155,7 +155,7 @@
   <celebration>0</celebration>
   <celebrationSong>Star Wars</celebrationSong>
   <postProcessing></postProcessing>
-  <defaultSpeed>4200</defaultSpeed>
+  <defaultSpeed>3000</defaultSpeed>
   <outlineUnderspeed>0.5</outlineUnderspeed>
   <solidInfillUnderspeed>0.9</solidInfillUnderspeed>
   <supportUnderspeed>0.8</supportUnderspeed>
@@ -225,7 +225,7 @@
       <setpoint layer="2" temperature="245"/>
     </temperatureController>
     <globalBedTemperature>120</globalBedTemperature>
-    <globalExtrusionMultiplier>1.1</globalExtrusionMultiplier>
+    <globalExtrusionMultiplier>1</globalExtrusionMultiplier>
     <fanSpeed>
       <setpoint layer="1" speed="0"/>
     </fanSpeed>
@@ -255,7 +255,7 @@
       <stabilizeAtStartup>1</stabilizeAtStartup>
       <setpoint layer="1" temperature="260"/>
     </temperatureController>
-    <globalBedTemperature>110</globalBedTemperature>
+    <globalBedTemperature>60</globalBedTemperature>
     <globalExtrusionMultiplier>0.98</globalExtrusionMultiplier>
     <fanSpeed>
       <setpoint layer="1" speed="18"/>
@@ -268,12 +268,12 @@
       <relayBetweenLayers>0</relayBetweenLayers>
       <relayBetweenLoops>0</relayBetweenLoops>
       <stabilizeAtStartup>1</stabilizeAtStartup>
-      <setpoint layer="1" temperature="210"/>
+      <setpoint layer="1" temperature="245"/>
     </temperatureController>
-    <globalBedTemperature>75</globalBedTemperature>
-    <globalExtrusionMultiplier>1.2</globalExtrusionMultiplier>
+    <globalBedTemperature>80</globalBedTemperature>
+    <globalExtrusionMultiplier>1.12</globalExtrusionMultiplier>
     <fanSpeed>
-      <setpoint layer="4" speed="40"/>
+      <setpoint layer="1" speed="40"/>
     </fanSpeed>
   </autoConfigureMaterial>
   <autoConfigureMaterial name="PolyCarbonate">
@@ -341,7 +341,7 @@
       <setpoint layer="1" temperature="210"/>
     </temperatureController>
     <globalBedTemperature>60</globalBedTemperature>
-    <globalExtrusionMultiplier>0.96</globalExtrusionMultiplier>
+    <globalExtrusionMultiplier>0.9</globalExtrusionMultiplier>
     <fanSpeed>
       <setpoint layer="1" speed="50"/>
       <setpoint layer="10" speed="100"/>
@@ -354,13 +354,44 @@
       <relayBetweenLayers>0</relayBetweenLayers>
       <relayBetweenLoops>0</relayBetweenLoops>
       <stabilizeAtStartup>1</stabilizeAtStartup>
-      <setpoint layer="1" temperature="225"/>
+      <setpoint layer="1" temperature="233"/>
     </temperatureController>
     <globalBedTemperature>60</globalBedTemperature>
     <globalExtrusionMultiplier>0.96</globalExtrusionMultiplier>
     <fanSpeed>
       <setpoint layer="1" speed="50"/>
       <setpoint layer="10" speed="100"/>
+    </fanSpeed>
+  </autoConfigureMaterial>
+  <autoConfigureMaterial name="NinjaTek Cheetah">
+    <temperatureController name="Left">
+      <temperatureNumber>0</temperatureNumber>
+      <isHeatedBed>0</isHeatedBed>
+      <relayBetweenLayers>0</relayBetweenLayers>
+      <relayBetweenLoops>0</relayBetweenLoops>
+      <stabilizeAtStartup>1</stabilizeAtStartup>
+      <setpoint layer="1" temperature="240"/>
+    </temperatureController>
+    <globalBedTemperature>80</globalBedTemperature>
+    <globalExtrusionMultiplier>1</globalExtrusionMultiplier>
+    <fanSpeed>
+      <setpoint layer="1" speed="0"/>
+      <setpoint layer="2" speed="100"/>
+    </fanSpeed>
+  </autoConfigureMaterial>
+  <autoConfigureMaterial name="eSun ABS">
+    <temperatureController name="Left">
+      <temperatureNumber>0</temperatureNumber>
+      <isHeatedBed>0</isHeatedBed>
+      <relayBetweenLayers>0</relayBetweenLayers>
+      <relayBetweenLoops>0</relayBetweenLoops>
+      <stabilizeAtStartup>1</stabilizeAtStartup>
+      <setpoint layer="1" temperature="245"/>
+    </temperatureController>
+    <globalBedTemperature>110</globalBedTemperature>
+    <globalExtrusionMultiplier>1</globalExtrusionMultiplier>
+    <fanSpeed>
+      <setpoint layer="1" speed="0"/>
     </fanSpeed>
   </autoConfigureMaterial>
 </profile>
