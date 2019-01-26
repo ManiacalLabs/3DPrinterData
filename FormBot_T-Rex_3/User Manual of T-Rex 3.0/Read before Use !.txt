@@ -1,0 +1,15 @@
+* Please ensure enough space for setting T-Rex 3, and leave 200mm gap around.
+
+* For beginners, please print with single extruders first, unless you are an advanced user or have experience on working with dual extruder.
+
+* Please wear protective glasses before laser engraving. or else, it'll cause damage to eyes.
+
+* The power of laser is quite high, so it's suggested to work within 2 hours. or else, it'll cause damage to engraver.
+
+* Recommend Temperature: PLA 190-200C, Bed 50-60C; ABS 220-230C, Bed 100-110C.
+
+* If the model you want to print is already 400x400mm, pls do not add "Brim" or "Raft" when slicing, coz it'll be over 400mm after add that.
+
+* Please insert filament into both extruders. if right extruder without filament inserted, it'll trigger filament sensor system when printing.
+
+* Please clean PEI sheet with alcohol every few prints, because the grease from your fingers are really bad for bed adhesion.
