@@ -1,15 +1,15 @@
 <?xml version="1.0"?>
-<profile name="T-Rex 2+ Single Left" version="2018-01-24 18:25:02" app="S3D-Software 4.0.0">
+<profile name="T-Rex 2+ Single Left" version="2018-06-27 15:55:38" app="S3D-Software 4.1.0">
   <baseProfile>Default</baseProfile>
-  <printMaterial>eSun PLA Pro+</printMaterial>
-  <printQuality>Fast</printQuality>
+  <printMaterial>MakerGeeks Raptor PLA</printMaterial>
+  <printQuality>Medium</printQuality>
   <printExtruders></printExtruders>
   <extruder name="Left">
     <toolheadNumber>0</toolheadNumber>
     <diameter>0.4</diameter>
     <autoWidth>0</autoWidth>
     <width>0.4</width>
-    <extrusionMultiplier>0.9</extrusionMultiplier>
+    <extrusionMultiplier>0.96</extrusionMultiplier>
     <useRetract>1</useRetract>
     <retractionDistance>1.4</retractionDistance>
     <extraRestartDistance>0</extraRestartDistance>
@@ -21,7 +21,7 @@
     <wipeDistance>5</wipeDistance>
   </extruder>
   <primaryExtruder>0</primaryExtruder>
-  <layerHeight>0.3</layerHeight>
+  <layerHeight>0.2</layerHeight>
   <topSolidLayers>3</topSolidLayers>
   <bottomSolidLayers>3</bottomSolidLayers>
   <perimeterOutlines>3</perimeterOutlines>
@@ -60,19 +60,19 @@
   <oozeShieldSidewallAngle>30</oozeShieldSidewallAngle>
   <oozeShieldSpeedMultiplier>1</oozeShieldSpeedMultiplier>
   <infillExtruder>0</infillExtruder>
-  <internalInfillPattern>Rectilinear</internalInfillPattern>
+  <internalInfillPattern>Triangular</internalInfillPattern>
   <externalInfillPattern>Rectilinear</externalInfillPattern>
-  <infillPercentage>15</infillPercentage>
+  <infillPercentage>40</infillPercentage>
   <outlineOverlapPercentage>25</outlineOverlapPercentage>
   <infillExtrusionWidthPercentage>100</infillExtrusionWidthPercentage>
   <minInfillLength>1.2</minInfillLength>
   <infillLayerInterval>1</infillLayerInterval>
-  <internalInfillAngles>45,-45</internalInfillAngles>
-  <overlapInternalInfillAngles>0</overlapInternalInfillAngles>
+  <internalInfillAngles>0,60,-60</internalInfillAngles>
+  <overlapInternalInfillAngles>1</overlapInternalInfillAngles>
   <externalInfillAngles>45,-45</externalInfillAngles>
   <generateSupport>0</generateSupport>
   <supportExtruder>0</supportExtruder>
-  <supportInfillPercentage>25</supportInfillPercentage>
+  <supportInfillPercentage>30</supportInfillPercentage>
   <supportExtraInflation>0</supportExtraInflation>
   <supportBaseLayers>0</supportBaseLayers>
   <denseSupportExtruder>0</denseSupportExtruder>
@@ -89,16 +89,12 @@
   <temperatureController name="Left">
     <temperatureNumber>0</temperatureNumber>
     <isHeatedBed>0</isHeatedBed>
-    <relayBetweenLayers>0</relayBetweenLayers>
-    <relayBetweenLoops>0</relayBetweenLoops>
     <stabilizeAtStartup>1</stabilizeAtStartup>
-    <setpoint layer="1" temperature="210"/>
+    <setpoint layer="1" temperature="235"/>
   </temperatureController>
   <temperatureController name="Heated Bed">
     <temperatureNumber>0</temperatureNumber>
     <isHeatedBed>1</isHeatedBed>
-    <relayBetweenLayers>0</relayBetweenLayers>
-    <relayBetweenLoops>0</relayBetweenLoops>
     <stabilizeAtStartup>1</stabilizeAtStartup>
     <setpoint layer="1" temperature="60"/>
   </temperatureController>
@@ -190,8 +186,8 @@
   <toolChangeRetractionDistance>35</toolChangeRetractionDistance>
   <toolChangeExtraRestartDistance>-0.5</toolChangeExtraRestartDistance>
   <toolChangeRetractionSpeed>600</toolChangeRetractionSpeed>
-  <externalThinWallType>0</externalThinWallType>
-  <internalThinWallType>2</internalThinWallType>
+  <externalThinWallType>1</externalThinWallType>
+  <internalThinWallType>1</internalThinWallType>
   <thinWallAllowedOverlapPercentage>15</thinWallAllowedOverlapPercentage>
   <singleExtrusionMinLength>1</singleExtrusionMinLength>
   <singleExtrusionMinPrintingWidthPercentage>50</singleExtrusionMinPrintingWidthPercentage>
@@ -271,7 +267,7 @@
       <setpoint layer="1" temperature="245"/>
     </temperatureController>
     <globalBedTemperature>80</globalBedTemperature>
-    <globalExtrusionMultiplier>1.12</globalExtrusionMultiplier>
+    <globalExtrusionMultiplier>1.08</globalExtrusionMultiplier>
     <fanSpeed>
       <setpoint layer="1" speed="40"/>
     </fanSpeed>
@@ -320,7 +316,7 @@
     <topSolidLayers>3</topSolidLayers>
     <bottomSolidLayers>3</bottomSolidLayers>
     <skirtLayers>1</skirtLayers>
-    <infillPercentage>25</infillPercentage>
+    <infillPercentage>40</infillPercentage>
     <supportInfillPercentage>30</supportInfillPercentage>
   </autoConfigureQuality>
   <autoConfigureQuality name="High">
@@ -392,6 +388,22 @@
     <globalExtrusionMultiplier>1</globalExtrusionMultiplier>
     <fanSpeed>
       <setpoint layer="1" speed="0"/>
+    </fanSpeed>
+  </autoConfigureMaterial>
+  <autoConfigureMaterial name="MakerGeeks Raptor PLA">
+    <temperatureController name="Left">
+      <temperatureNumber>0</temperatureNumber>
+      <isHeatedBed>0</isHeatedBed>
+      <relayBetweenLayers>0</relayBetweenLayers>
+      <relayBetweenLoops>0</relayBetweenLoops>
+      <stabilizeAtStartup>1</stabilizeAtStartup>
+      <setpoint layer="1" temperature="235"/>
+    </temperatureController>
+    <globalBedTemperature>60</globalBedTemperature>
+    <globalExtrusionMultiplier>0.96</globalExtrusionMultiplier>
+    <fanSpeed>
+      <setpoint layer="1" speed="50"/>
+      <setpoint layer="10" speed="100"/>
     </fanSpeed>
   </autoConfigureMaterial>
 </profile>
