@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<profile name="T3 Single Right 1.2mm" version="2019-05-02 22:57:49" app="S3D-Software 4.1.1">
+<profile name="T3 Single Right 1.2mm" version="2019-05-05 18:36:26" app="S3D-Software 4.1.1">
   <baseProfile>Default</baseProfile>
   <printMaterial>PLA</printMaterial>
   <printQuality>Fast</printQuality>
@@ -10,12 +10,12 @@
     <autoWidth>0</autoWidth>
     <width>1.2</width>
     <extrusionMultiplier>1</extrusionMultiplier>
-    <useRetract>1</useRetract>
-    <retractionDistance>0.2</retractionDistance>
+    <useRetract>0</useRetract>
+    <retractionDistance>0.05</retractionDistance>
     <extraRestartDistance>0</extraRestartDistance>
     <retractionZLift>0</retractionZLift>
     <retractionSpeed>1800</retractionSpeed>
-    <useCoasting>1</useCoasting>
+    <useCoasting>0</useCoasting>
     <coastingDistance>0.2</coastingDistance>
     <useWipe>0</useWipe>
     <wipeDistance>5</wipeDistance>
@@ -33,7 +33,7 @@
   <spiralVaseMode>0</spiralVaseMode>
   <firstLayerHeightPercentage>100</firstLayerHeightPercentage>
   <firstLayerWidthPercentage>110</firstLayerWidthPercentage>
-  <firstLayerUnderspeed>0.5</firstLayerUnderspeed>
+  <firstLayerUnderspeed>0.6</firstLayerUnderspeed>
   <useRaft>0</useRaft>
   <raftExtruder>0</raftExtruder>
   <raftTopLayers>1</raftTopLayers>
@@ -100,7 +100,7 @@
   </temperatureController>
   <fanSpeed>
     <setpoint layer="1" speed="0"/>
-    <setpoint layer="2" speed="100"/>
+    <setpoint layer="2" speed="60"/>
   </fanSpeed>
   <blipFanToFullPower>1</blipFanToFullPower>
   <adjustSpeedForCooling>1</adjustSpeedForCooling>
@@ -142,7 +142,7 @@
   <baudRateOverride>250000</baudRateOverride>
   <overridePrinterModels>0</overridePrinterModels>
   <printerModelsOverride></printerModelsOverride>
-  <startingGcode>M104 S195 T0; Have to heat up T0 due to bug in Marlin,M104 S[extruder1_temperature] T1,M140 S[bed0_temperature] ; Set bed temp and do not wait - preheat,G90 ; Absolute positioning,M605 S1 ; Dual nozzle mode auto park,,G28 	; home all axes,,M106 P0 S0,M106 P1 S0,M190 S[bed0_temperature] ; Set bed temp and wait to be reached,M109 S195 T0 ; Wait for extruder temp to stabilize,M109 S[extruder1_temperature] T1 ; Wait for extruder temp to stabilize,,G29 A; Activate mesh,M420 S1	; Load bed level mesh,G91	; incremental distance mode,G90	; absolute distance mode,G1 X-40 F8000   ; Move T0 out of the way just in case,T1	; select right tool,M104 S0 T0; Cool down T0 due to bug in Marlin,G1 X440 F8000  ; Move right tool to bucket,G92 E0	; &quot;home&quot; extruder,G1 E20 F300	; extrude to prime nozzle,G1 X420 F5000  ; begin scrub,G1 X440,G1 X420,G1 X440,G1 X420,G1 X440	; end scrub,G92 E0 ; Zero extruder,G1 X250 	; Move tool over bed,G1 Y200 F5000</startingGcode>
+  <startingGcode>M217 S0; Disable tool swap retract,;M104 S195 T0; Have to heat up T0 due to bug in Marlin,M104 S[extruder1_temperature] T1,M140 S[bed0_temperature] ; Set bed temp and do not wait - preheat,G90 ; Absolute positioning,M605 S1 ; Dual nozzle mode auto park,,G28 	; home all axes,,M106 P0 S0,M106 P1 S0,M190 S[bed0_temperature] ; Set bed temp and wait to be reached,;M109 S195 T0 ; Wait for extruder temp to stabilize,M109 S[extruder1_temperature] T1 ; Wait for extruder temp to stabilize,,G29 A; Activate mesh,M420 S1	; Load bed level mesh,G91	; incremental distance mode,G90	; absolute distance mode,G1 X-40 F8000   ; Move T0 out of the way just in case,T1	; select right tool,M104 S0 T0; Cool down T0 due to bug in Marlin,G1 X440 F8000  ; Move right tool to bucket,G92 E0	; &quot;home&quot; extruder,G1 E20 F300	; extrude to prime nozzle,G1 X420 F5000  ; begin scrub,G1 X440,G1 X420,G1 X440,G1 X420,G1 X440	; end scrub,G92 E0 ; Zero extruder,G1 X250 	; Move tool over bed,G1 Y200 F5000</startingGcode>
   <layerChangeGcode></layerChangeGcode>
   <retractionGcode></retractionGcode>
   <toolChangeGcode>{IF NEWTOOL=0}M106 P0 S[fan_speed_pwm]  	; turns on primary extruder cooling fan while using primary extruder ,{IF NEWTOOL=0}M106 P1 S0		; change the 0 in S0 to the standby fan speed you want,,{IF NEWTOOL=1}M106 P1 S[fan_speed_pwm] 	; turns on secondary extruder cooling fan while using secondary extruder,{IF NEWTOOL=1}M106 P0 S0		;  change the 0 in S0 to the standby fan speed you want</toolChangeGcode>
@@ -152,13 +152,13 @@
   <celebrationSong>Star Wars</celebrationSong>
   <postProcessing></postProcessing>
   <defaultSpeed>2400</defaultSpeed>
-  <outlineUnderspeed>0.5</outlineUnderspeed>
+  <outlineUnderspeed>0.8</outlineUnderspeed>
   <solidInfillUnderspeed>0.9</solidInfillUnderspeed>
   <supportUnderspeed>0.8</supportUnderspeed>
   <rapidXYspeed>3600</rapidXYspeed>
   <rapidZspeed>1002</rapidZspeed>
   <minBridgingArea>50</minBridgingArea>
-  <bridgingExtraInflation>0</bridgingExtraInflation>
+  <bridgingExtraInflation>5</bridgingExtraInflation>
   <bridgingExtrusionMultiplier>1</bridgingExtrusionMultiplier>
   <bridgingSpeedMultiplier>1</bridgingSpeedMultiplier>
   <useFixedBridgingAngle>0</useFixedBridgingAngle>
@@ -191,7 +191,7 @@
   <thinWallAllowedOverlapPercentage>15</thinWallAllowedOverlapPercentage>
   <singleExtrusionMinLength>1</singleExtrusionMinLength>
   <singleExtrusionMinPrintingWidthPercentage>50</singleExtrusionMinPrintingWidthPercentage>
-  <singleExtrusionMaxPrintingWidthPercentage>200</singleExtrusionMaxPrintingWidthPercentage>
+  <singleExtrusionMaxPrintingWidthPercentage>120</singleExtrusionMaxPrintingWidthPercentage>
   <singleExtrusionEndpointExtension>0.2</singleExtrusionEndpointExtension>
   <horizontalSizeCompensation>0</horizontalSizeCompensation>
   <autoConfigureMaterial name="PLA">
@@ -205,7 +205,7 @@
     <globalExtrusionMultiplier>1</globalExtrusionMultiplier>
     <fanSpeed>
       <setpoint layer="1" speed="0"/>
-      <setpoint layer="2" speed="100"/>
+      <setpoint layer="2" speed="60"/>
     </fanSpeed>
   </autoConfigureMaterial>
   <autoConfigureMaterial name="ABS">
