@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<profile name="T3 Single Left 0.6mm" version="2019-05-02 20:53:28" app="S3D-Software 4.1.1">
+<profile name="T3 Single Left 0.6mm" version="2019-05-06 21:08:43" app="S3D-Software 4.1.1">
   <baseProfile>Default</baseProfile>
   <printMaterial>MakerGeeks PLA</printMaterial>
   <printQuality>Fast</printQuality>
@@ -125,7 +125,7 @@
   <machineTypeOverride>0</machineTypeOverride>
   <strokeXoverride>400</strokeXoverride>
   <strokeYoverride>405</strokeYoverride>
-  <strokeZoverride>500</strokeZoverride>
+  <strokeZoverride>490</strokeZoverride>
   <originOffsetXoverride>0</originOffsetXoverride>
   <originOffsetYoverride>0</originOffsetYoverride>
   <originOffsetZoverride>0</originOffsetZoverride>
