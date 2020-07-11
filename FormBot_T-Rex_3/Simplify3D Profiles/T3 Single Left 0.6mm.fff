@@ -1,27 +1,27 @@
 <?xml version="1.0"?>
-<profile name="T3 Single Left 0.6mm" version="2019-05-06 21:08:43" app="S3D-Software 4.1.1">
+<profile name="T3 Single Left 0.6mm" version="2020-01-02 09:06:08" app="S3D-Software 4.1.1">
   <baseProfile>Default</baseProfile>
-  <printMaterial>MakerGeeks PLA</printMaterial>
-  <printQuality>Fast</printQuality>
+  <printMaterial>Atomic PLA</printMaterial>
+  <printQuality>Medium</printQuality>
   <printExtruders></printExtruders>
   <extruder name="Left">
     <toolheadNumber>0</toolheadNumber>
     <diameter>0.6</diameter>
     <autoWidth>0</autoWidth>
     <width>0.6</width>
-    <extrusionMultiplier>0.96</extrusionMultiplier>
+    <extrusionMultiplier>1</extrusionMultiplier>
     <useRetract>1</useRetract>
-    <retractionDistance>1.4</retractionDistance>
+    <retractionDistance>3</retractionDistance>
     <extraRestartDistance>0</extraRestartDistance>
     <retractionZLift>0</retractionZLift>
-    <retractionSpeed>1800</retractionSpeed>
-    <useCoasting>1</useCoasting>
+    <retractionSpeed>2700</retractionSpeed>
+    <useCoasting>0</useCoasting>
     <coastingDistance>0.6</coastingDistance>
     <useWipe>0</useWipe>
     <wipeDistance>5</wipeDistance>
   </extruder>
   <primaryExtruder>0</primaryExtruder>
-  <layerHeight>0.4</layerHeight>
+  <layerHeight>0.3</layerHeight>
   <topSolidLayers>3</topSolidLayers>
   <bottomSolidLayers>3</bottomSolidLayers>
   <perimeterOutlines>2</perimeterOutlines>
@@ -32,7 +32,7 @@
   <sequentialIslands>0</sequentialIslands>
   <spiralVaseMode>0</spiralVaseMode>
   <firstLayerHeightPercentage>100</firstLayerHeightPercentage>
-  <firstLayerWidthPercentage>110</firstLayerWidthPercentage>
+  <firstLayerWidthPercentage>115</firstLayerWidthPercentage>
   <firstLayerUnderspeed>0.5</firstLayerUnderspeed>
   <useRaft>0</useRaft>
   <raftExtruder>0</raftExtruder>
@@ -60,19 +60,19 @@
   <oozeShieldSidewallAngle>30</oozeShieldSidewallAngle>
   <oozeShieldSpeedMultiplier>1</oozeShieldSpeedMultiplier>
   <infillExtruder>0</infillExtruder>
-  <internalInfillPattern>Triangular</internalInfillPattern>
+  <internalInfillPattern>Grid</internalInfillPattern>
   <externalInfillPattern>Rectilinear</externalInfillPattern>
-  <infillPercentage>15</infillPercentage>
+  <infillPercentage>30</infillPercentage>
   <outlineOverlapPercentage>25</outlineOverlapPercentage>
   <infillExtrusionWidthPercentage>100</infillExtrusionWidthPercentage>
   <minInfillLength>1.2</minInfillLength>
   <infillLayerInterval>1</infillLayerInterval>
-  <internalInfillAngles>0,60,-60</internalInfillAngles>
+  <internalInfillAngles>45,-45</internalInfillAngles>
   <overlapInternalInfillAngles>1</overlapInternalInfillAngles>
   <externalInfillAngles>45,-45</externalInfillAngles>
   <generateSupport>0</generateSupport>
   <supportExtruder>0</supportExtruder>
-  <supportInfillPercentage>25</supportInfillPercentage>
+  <supportInfillPercentage>30</supportInfillPercentage>
   <supportExtraInflation>0</supportExtraInflation>
   <supportBaseLayers>0</supportBaseLayers>
   <denseSupportExtruder>0</denseSupportExtruder>
@@ -90,7 +90,7 @@
     <temperatureNumber>0</temperatureNumber>
     <isHeatedBed>0</isHeatedBed>
     <stabilizeAtStartup>1</stabilizeAtStartup>
-    <setpoint layer="1" temperature="233"/>
+    <setpoint layer="1" temperature="235"/>
   </temperatureController>
   <temperatureController name="Heated Bed">
     <temperatureNumber>0</temperatureNumber>
@@ -142,7 +142,7 @@
   <baudRateOverride>250000</baudRateOverride>
   <overridePrinterModels>0</overridePrinterModels>
   <printerModelsOverride></printerModelsOverride>
-  <startingGcode>T0,G28 ; home all axes,G29 A	; enable UBL,M420 S1,G91	; set for command,G90	; close command,G1 X-42 F8000,G92 E0,G1 E5 F300,G1 X0 F5000,G1 X-40,G1 X0,G1 X-40,G1 X0,G1 X-40,G1 X150 ,G1 Y200 F5000</startingGcode>
+  <startingGcode>T0,G28 ; home all axes,G29 A	; enable UBL,M420 S1,G91	; set for command,G90	; close command,G1 X-42 F8000,G92 E0,G1 E15 F300,G1 X0 F5000,G1 X-40,G1 X0,G1 X-40,G1 X0,G1 X-40,,G1 Y1.0 X10 Z0.3 F5000.0 ; go to perimeter, 0.15mm from bed,G92 E0.0,G1 X80.0 E12  F1000.0 ; intro line,G1 X140.0 E18  F1000.0 ; intro line,G92 E0.0</startingGcode>
   <layerChangeGcode></layerChangeGcode>
   <retractionGcode></retractionGcode>
   <toolChangeGcode>{IF NEWTOOL=0}M106 P0 S[fan_speed_pwm]  	; turns on primary extruder cooling fan while using primary extruder ,{IF NEWTOOL=0}M106 P1 S0		; change the 0 in S0 to the standby fan speed you want,,{IF NEWTOOL=1}M106 P1 S[fan_speed_pwm] 	; turns on secondary extruder cooling fan while using secondary extruder,{IF NEWTOOL=1}M106 P0 S0		;  change the 0 in S0 to the standby fan speed you want</toolChangeGcode>
@@ -151,14 +151,14 @@
   <celebration>0</celebration>
   <celebrationSong>Star Wars</celebrationSong>
   <postProcessing></postProcessing>
-  <defaultSpeed>3000</defaultSpeed>
+  <defaultSpeed>3300</defaultSpeed>
   <outlineUnderspeed>0.5</outlineUnderspeed>
   <solidInfillUnderspeed>0.9</solidInfillUnderspeed>
   <supportUnderspeed>0.8</supportUnderspeed>
   <rapidXYspeed>3600</rapidXYspeed>
   <rapidZspeed>1002</rapidZspeed>
   <minBridgingArea>50</minBridgingArea>
-  <bridgingExtraInflation>0</bridgingExtraInflation>
+  <bridgingExtraInflation>5</bridgingExtraInflation>
   <bridgingExtrusionMultiplier>1</bridgingExtrusionMultiplier>
   <bridgingSpeedMultiplier>1</bridgingSpeedMultiplier>
   <useFixedBridgingAngle>0</useFixedBridgingAngle>
@@ -308,15 +308,15 @@
     <topSolidLayers>3</topSolidLayers>
     <bottomSolidLayers>3</bottomSolidLayers>
     <skirtLayers>1</skirtLayers>
-    <infillPercentage>15</infillPercentage>
+    <infillPercentage>30</infillPercentage>
     <supportInfillPercentage>25</supportInfillPercentage>
   </autoConfigureQuality>
   <autoConfigureQuality name="Medium">
-    <layerHeight>0.2</layerHeight>
+    <layerHeight>0.3</layerHeight>
     <topSolidLayers>3</topSolidLayers>
     <bottomSolidLayers>3</bottomSolidLayers>
     <skirtLayers>1</skirtLayers>
-    <infillPercentage>40</infillPercentage>
+    <infillPercentage>30</infillPercentage>
     <supportInfillPercentage>30</supportInfillPercentage>
   </autoConfigureQuality>
   <autoConfigureQuality name="High">
@@ -348,7 +348,7 @@
       <temperatureNumber>0</temperatureNumber>
       <isHeatedBed>0</isHeatedBed>
       <stabilizeAtStartup>1</stabilizeAtStartup>
-      <setpoint layer="1" temperature="233"/>
+      <setpoint layer="1" temperature="235"/>
     </temperatureController>
     <globalBedTemperature>60</globalBedTemperature>
     <globalExtrusionMultiplier>0.96</globalExtrusionMultiplier>
@@ -397,6 +397,20 @@
     </temperatureController>
     <globalBedTemperature>60</globalBedTemperature>
     <globalExtrusionMultiplier>0.96</globalExtrusionMultiplier>
+    <fanSpeed>
+      <setpoint layer="1" speed="50"/>
+      <setpoint layer="10" speed="100"/>
+    </fanSpeed>
+  </autoConfigureMaterial>
+  <autoConfigureMaterial name="Atomic PLA">
+    <temperatureController name="Left">
+      <temperatureNumber>0</temperatureNumber>
+      <isHeatedBed>0</isHeatedBed>
+      <stabilizeAtStartup>1</stabilizeAtStartup>
+      <setpoint layer="1" temperature="235"/>
+    </temperatureController>
+    <globalBedTemperature>60</globalBedTemperature>
+    <globalExtrusionMultiplier>1</globalExtrusionMultiplier>
     <fanSpeed>
       <setpoint layer="1" speed="50"/>
       <setpoint layer="10" speed="100"/>
